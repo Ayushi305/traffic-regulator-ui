@@ -1,0 +1,26 @@
+*Database Tables:*
+
+1. *Users Table:*
+   - This table will store information about registered users.
+   - Columns: `user_id`, `email`, `password`, `credibility_points`, `submission_count`, `submission_limit`, `is_admin`, `vehicle_number`.
+ 
+
+2. *Submissions Table:*
+   - This table will store information about traffic rule violation submissions.
+   - Columns: `submission_id`, `user_id` (submitter), `submission_date`, `violation_description`, `violation_media_url`, `is_reviewed`, `reviewed_by`, `is_valid`.
+
+ 
+
+3. *Earnings Table:*
+   - This table will track earnings from valid submissions.
+   - Columns: `earning_id`, `submission_id`, `earnings_amount`, `user_id` (submitter), `admin_id` (reviewer), `earning_date`.
+
+ 
+4. *Admins Table:*
+   - This table will store information about admin users.
+   - Columns: `admin_id`, `email`, `password`.
+
+
+5. *CredibilityPointsHistory Table:*
+   - This table will store the history of credibility points earned or deducted for each user.
+   - Columns: `history_id`, `user_id`, `credibility_points`, `reason`, `history_date`.
